@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+   <meta charset="UTF-8">
+   <title>textAngular 1.4.6 Demo</title>
+   <meta name="robots" content="noindex">
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../dist/textAngular.css" type="text/css">
+</head>
+
+<body>
+
+<div class="container app" ng-controller="DemoController as demoCtrl">
+
+   <div class="container">
+
+      <div class="row">
+         <div class="col-sm-12">
+            <h3>Editor demo</h3>
+            <div text-angular
+                 ng-model="demoCtrl.htmlContent"
+                 name="demo-editor"
+                 ta-text-editor-class="border-around"
+                 ta-html-editor-class="border-around">
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-12">
+            <h3>HTML output</h3>
+            <pre ng-bind="htmlContent" class="white-box"></pre>
+         </div>
+      </div>
+
+
+   </div>
+
+</div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>
+
+<script src='../dist/textAngular.min.js'></script>
+
+<script src='../dist/textAngular-rangy.min.js'></script>
+
+<script src='../dist/textAngular-sanitize.min.js'></script>
+
+<script src="moduleDemo.js"></script>
+<script src="demoRoute.js"></script>
+<script src="demo.js"></script>
+
+
+</body>
+
+</html>
